@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+ARMS=10
+PROBLEMS=2000
+STEPS=1000
+LABEL=a=10_p=2000_s=1000
+KIND=fig_2_2
+cargo build --release && \
+target/release/bandit $ARMS $PROBLEMS $STEPS --epsilon=0 && \
+target/release/bandit $ARMS $PROBLEMS $STEPS --epsilon=0.01 && \
+target/release/bandit $ARMS $PROBLEMS $STEPS --epsilon=0.1 && \
+python plot.py results/$LABEL $KIND
+# open -a Firefox results/$LABEL/$KIND/reward.svg && \
+# open -a Firefox results/$LABEL/$KIND/optimal.svg

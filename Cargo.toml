@@ -1,0 +1,8 @@
+[package]
+name = "bandit"
+version = "0.1.0"
+authors = ["David James <davidcjames@gmail.com>"]
+
+[dependencies]
+clap = "2.31.2"
+rand = "0.5"
