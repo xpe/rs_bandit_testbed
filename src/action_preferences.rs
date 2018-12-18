@@ -1,7 +1,6 @@
+/// AP = Action Preferences
 /// An agent's action preferences (internal state)
 #[derive(Clone, Debug)]
-
-/// AP = Action Preferences
 pub struct AP {
     /// Action preference for each bandit arm
     pub h: Vec<f64>,

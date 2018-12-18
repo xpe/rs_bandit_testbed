@@ -1,7 +1,6 @@
-/// An agent's action value estimates (internal state)
-
-#[derive(Clone, Debug)]
 /// AVE = Action Value Estimates
+/// An agent's action value estimates (internal state)
+#[derive(Clone, Debug)]
 pub struct AVE {
     /// Action value estimate for each bandit arm
     pub q: Vec<f64>,
